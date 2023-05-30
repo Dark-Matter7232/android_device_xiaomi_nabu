@@ -22,3 +22,6 @@ persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
 ro.debuggable=1
 
+# Phantom process monitoring
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
