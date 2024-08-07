@@ -19,3 +19,10 @@ ro.radio.noril=true
 
 # Media
 ro.odm.build.media_performance_class=30
+
+# enable debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+
