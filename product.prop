@@ -16,3 +16,9 @@ use.voice.path.for.pcm.voip=true
 
 # radio
 ro.radio.noril=true
+
+# enable debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
+
