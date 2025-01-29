@@ -370,6 +370,9 @@ on post-fs-data
     #Create dir for dolby
     mkdir /data/vendor/dolby 0770 media media
 
+    # Set default thermal profile to dynamic
+    write /sys/class/thermal/thermal_message/sconfig 10
+
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
