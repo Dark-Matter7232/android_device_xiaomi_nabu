@@ -206,6 +206,9 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
 USE_DEX2OAT_DEBUG := false
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
