@@ -396,11 +396,6 @@ PRODUCT_PACKAGES += \
     init.xiaomi.rc \
     ueventd.qcom.rc
 
-# IRQ Tuning
-PRODUCT_PACKAGES += \
-    init.mi_perf.rc \
-    init.mi_perf.sh
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl-xiaomi \
