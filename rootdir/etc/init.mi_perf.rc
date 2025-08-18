@@ -5,8 +5,8 @@
 on property:vendor.post_boot.parsed=1
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.mi_perf.sh
 
-    # Set default thermal profile to dynamic
-    write /sys/class/thermal/thermal_message/sconfig 10
+    # Set default thermal profile
+    write /sys/class/thermal/thermal_message/sconfig 0
 
 service vendor.qti.hardware.display.composer /vendor/bin/hw/vendor.qti.hardware.display.composer-service
     override
