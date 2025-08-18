@@ -463,6 +463,12 @@ function sdm660_sched_interactive_dcvs() {
             echo 1600 > $cpubw/bw_hwmon/idle_mbps
         done
 
+    for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+        do
+            echo "mem_latency" > $memlat/governor
+            echo 10 > $memlat/polling_interval
+            echo 400 > $memlat/mem_latency/ratio_ceil
+        done
     echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 }
 
@@ -516,6 +522,13 @@ function sdm660_sched_schedutil_dcvs() {
             echo 0 > $cpubw/bw_hwmon/guard_band_mbps
             echo 250 > $cpubw/bw_hwmon/up_scale
             echo 1600 > $cpubw/bw_hwmon/idle_mbps
+        done
+
+        for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
+        do
+            echo "mem_latency" > $memlat/governor
+            echo 10 > $memlat/polling_interval
+            echo 400 > $memlat/mem_latency/ratio_ceil
         done
 
         for latfloor in $device/*cpu*-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
@@ -2932,6 +2945,13 @@ case "$target" in
                 echo 1600 > $cpubw/bw_hwmon/idle_mbps
             done
 
+            for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+            do
+                echo "mem_latency" > $memlat/governor
+                echo 10 > $memlat/polling_interval
+                echo 400 > $memlat/mem_latency/ratio_ceil
+            done
+
             echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
             ;;
         esac
@@ -3024,6 +3044,22 @@ case "$target" in
                 echo 0 > $cpubw/bw_hwmon/guard_band_mbps
                 echo 250 > $cpubw/bw_hwmon/up_scale
                 echo 1600 > $cpubw/bw_hwmon/idle_mbps
+            done
+
+            #Enable mem_latency governor for DDR scaling
+            for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+            do
+                echo "mem_latency" > $memlat/governor
+                echo 10 > $memlat/polling_interval
+                echo 400 > $memlat/mem_latency/ratio_ceil
+            done
+
+            #Enable mem_latency governor for L3 scaling
+            for memlat in /sys/class/devfreq/*qcom,l3-cpu*
+            do
+                echo "mem_latency" > $memlat/governor
+                echo 10 > $memlat/polling_interval
+                echo 400 > $memlat/mem_latency/ratio_ceil
             done
 
             #Enable userspace governor for L3 cdsp nodes
@@ -3939,6 +3975,13 @@ case "$target" in
                    echo 1600 > $cpubw/bw_hwmon/idle_mbps
                 done
 
+                for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
+                do
+                    echo "mem_latency" > $memlat/governor
+                    echo 10 > $memlat/polling_interval
+                    echo 400 > $memlat/mem_latency/ratio_ceil
+                done
+
                 for latfloor in $device/*cpu*-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
                 do
                     echo "compute" > $latfloor/governor
@@ -4160,6 +4203,22 @@ case "$target" in
                 echo 0 > $cpubw/bw_hwmon/guard_band_mbps
                 echo 250 > $cpubw/bw_hwmon/up_scale
                 echo 1600 > $cpubw/bw_hwmon/idle_mbps
+            done
+
+            #Enable mem_latency governor for DDR scaling
+            for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+            do
+                echo "mem_latency" > $memlat/governor
+                echo 10 > $memlat/polling_interval
+                echo 400 > $memlat/mem_latency/ratio_ceil
+            done
+
+            #Enable mem_latency governor for L3 scaling
+            for memlat in /sys/class/devfreq/*qcom,l3-cpu*
+            do
+                echo "mem_latency" > $memlat/governor
+                echo 10 > $memlat/polling_interval
+                echo 400 > $memlat/mem_latency/ratio_ceil
             done
 
             echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
@@ -4542,6 +4601,11 @@ case "$target" in
             echo 1600 > $cpubw/bw_hwmon/idle_mbps
         done
 
+        for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+        do
+            echo "mem_latency" > $memlat/governor
+            echo 10 > $memlat/polling_interval
+        done
         echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
 	soc_revision=`cat /sys/devices/soc0/revision`
@@ -4675,6 +4739,22 @@ case "$target" in
             echo 0 > $llccbw/bw_hwmon/guard_band_mbps
             echo 250 > $llccbw/bw_hwmon/up_scale
             echo 1600 > $llccbw/bw_hwmon/idle_mbps
+        done
+
+	#Enable mem_latency governor for DDR scaling
+        for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+        do
+	echo "mem_latency" > $memlat/governor
+            echo 10 > $memlat/polling_interval
+            echo 400 > $memlat/mem_latency/ratio_ceil
+        done
+
+	#Enable mem_latency governor for L3 scaling
+        for memlat in /sys/class/devfreq/*qcom,l3-cpu*
+        do
+            echo "mem_latency" > $memlat/governor
+            echo 10 > $memlat/polling_interval
+            echo 400 > $memlat/mem_latency/ratio_ceil
         done
 
         #Enable userspace governor for L3 cdsp nodes
@@ -5025,6 +5105,14 @@ case "$target" in
 		echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
 	    done
 
+	    #Enable mem_latency governor for L3, LLCC, and DDR scaling
+	    for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
+	    do
+		echo "mem_latency" > $memlat/governor
+		echo 10 > $memlat/polling_interval
+		echo 400 > $memlat/mem_latency/ratio_ceil
+	    done
+
 	    #Enable userspace governor for L3 cdsp nodes
 	    for l3cdsp in $device/*cdsp-cdsp-l3-lat/devfreq/*cdsp-cdsp-l3-lat
 	    do
@@ -5370,6 +5458,12 @@ case "$target" in
             echo 1600 > $cpubw/bw_hwmon/idle_mbps
         done
 
+        for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+        do
+            echo "mem_latency" > $memlat/governor
+            echo 10 > $memlat/polling_interval
+            echo 400 > $memlat/mem_latency/ratio_ceil
+        done
         echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 	if [ -f /sys/devices/soc0/soc_id ]; then
 		soc_id=`cat /sys/devices/soc0/soc_id`
