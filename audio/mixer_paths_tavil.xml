@@ -996,7 +996,7 @@
     <path name="cirrus-sp-diagnostic">
         <ctl name="PCM Source" value="DSP" />
         <ctl name="DSP1 Firmware" value="Diag" />
-        <ctl name="Digital PCM Volume" value="890" />
+        <ctl name="Digital PCM Volume" value="860" />
         <ctl name="AMP PCM Gain" value="17" />
         <ctl name="DSP1 Preload Switch" value="1" />
     </path>
