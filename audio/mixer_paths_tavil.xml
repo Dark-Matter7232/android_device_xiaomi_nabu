@@ -375,14 +375,14 @@
     <ctl name="EAR PA Gain" value="G_6_DB" />
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
-    <ctl name="RX0 Digital Volume" value="102" />
-    <ctl name="RX1 Digital Volume" value="102" />
-    <ctl name="RX2 Digital Volume" value="102" />
-    <ctl name="RX3 Digital Volume" value="102" />
-    <ctl name="RX4 Digital Volume" value="102" />
-    <ctl name="RX5 Digital Volume" value="102" />
-    <ctl name="RX6 Digital Volume" value="102" />
-    <ctl name="RX7 Digital Volume" value="102" />
+    <ctl name="RX0 Digital Volume" value="110" />
+    <ctl name="RX1 Digital Volume" value="110" />
+    <ctl name="RX2 Digital Volume" value="110" />
+    <ctl name="RX3 Digital Volume" value="110" />
+    <ctl name="RX4 Digital Volume" value="110" />
+    <ctl name="RX5 Digital Volume" value="110" />
+    <ctl name="RX6 Digital Volume" value="110" />
+    <ctl name="RX7 Digital Volume" value="110" />
     <ctl name="ADC1 Volume" value="8" />
     <ctl name="ADC2 Volume" value="8" />
     <ctl name="ADC3 Volume" value="8" />
@@ -996,7 +996,7 @@
     <path name="cirrus-sp-diagnostic">
         <ctl name="PCM Source" value="DSP" />
         <ctl name="DSP1 Firmware" value="Diag" />
-        <ctl name="Digital PCM Volume" value="817" />
+        <ctl name="Digital PCM Volume" value="890" />
         <ctl name="AMP PCM Gain" value="17" />
         <ctl name="DSP1 Preload Switch" value="1" />
     </path>

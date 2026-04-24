@@ -320,8 +320,8 @@
     <ctl name="EAR PA Gain" value="G_6_DB" />
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
-    <ctl name="RX0 Digital Volume" value="102" />
-    <ctl name="RX7 Digital Volume" value="102" />
+    <ctl name="RX0 Digital Volume" value="110" />
+    <ctl name="RX7 Digital Volume" value="110" />
     <ctl name="RX8 Digital Volume" value="102" />
     <ctl name="RX9 Digital Volume" value="102" />
     <ctl name="ADC1 Volume" value="12" />

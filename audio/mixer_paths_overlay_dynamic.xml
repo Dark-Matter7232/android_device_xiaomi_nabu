@@ -57,44 +57,44 @@
     </path>
 
     <path name="deep-buffer-playback headphones">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
     <path name="compress-offload-playback headphones">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback2 headphones">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
     <path name="compress-offload-playback3 headphones">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
     <path name="compress-offload-playback headphones-44.1">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_5_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback2 headphones-44.1">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_5_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
     <path name="compress-offload-playback3 headphones-44.1">
-        <ctl name="HPHL Volume" value="14" />
-        <ctl name="HPHR Volume" value="14" />
+        <ctl name="HPHL Volume" value="18" />
+        <ctl name="HPHR Volume" value="18" />
         <ctl name="SLIMBUS_5_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
