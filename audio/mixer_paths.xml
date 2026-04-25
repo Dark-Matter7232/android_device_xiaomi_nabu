@@ -137,7 +137,7 @@
     <ctl name="TR Fast Use Case Switch Enable" value="1"/>
     <ctl name="TR Digital PCM Volume"  value="847"/>
     <ctl name="TR Channel Swap" value="On" />
-    <ctl name="TR VPBR Config" value="33575695" />
+    <ctl name="TR VPBR Config" value="33575688" />
     <ctl name="TR Noise Gate Config" value="16245" />
 
     <!-- CS35L41 Top Left (TL) Amplifier -->
@@ -166,7 +166,7 @@
     <ctl name="TL Fast Use Case Switch Enable" value="1"/>
     <ctl name="TL Digital PCM Volume"  value="847"/>
     <ctl name="TL Channel Swap" value="Off" />
-    <ctl name="TL VPBR Config" value="33575695" />
+    <ctl name="TL VPBR Config" value="33575688" />
     <ctl name="TL Noise Gate Config" value="16245" />
 
     <!-- CS35L41 Bottom Right (BR) Amplifier -->
@@ -195,7 +195,7 @@
     <ctl name="BR Fast Use Case Switch Enable" value="1"/>
     <ctl name="BR Digital PCM Volume"  value="847"/>
     <ctl name="BR Channel Swap" value="On" />
-    <ctl name="BR VPBR Config" value="33575695" />
+    <ctl name="BR VPBR Config" value="33575688" />
     <ctl name="BR Noise Gate Config" value="16245" />
 
     <!-- CS35L41 Bottom Left (BL) Amplifier -->
@@ -224,7 +224,7 @@
     <ctl name="BL Fast Use Case Switch Enable" value="1"/>
     <ctl name="BL Digital PCM Volume"  value="847"/>
     <ctl name="BL Channel Swap" value="Off" />
-    <ctl name="BL VPBR Config" value="33575695" />
+    <ctl name="BL VPBR Config" value="33575688" />
     <ctl name="BL Noise Gate Config" value="16245" />
 
     <!-- ================================================================== -->
