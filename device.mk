@@ -31,6 +31,9 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 TARGET_EXCLUDES_AUDIOFX := true
 endif
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # Symlinks
 $(call inherit-product, device/xiaomi/nabu/symlink/targets.mk)
 
